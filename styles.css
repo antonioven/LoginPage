@@ -31,16 +31,86 @@
     margin-bottom: 10px;
 }
 #data label{
-    color: grey;
+    color: #808080;
 }
-#userpass a{
+#extra{
     display: flex;
+}
+#extra div{
+    display: flex;
+}
+#extra label{
+    align-self: center;
+    margin-right: 5px;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+#extra input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+#extra span{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 17px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#extra span:before{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#extra input:checked + .slider{
+    background-color: #FF0000;
+}
+#extra input:focus+.slider{
+    box-shadow: 0 0 1px #FF0000;
+}
+#extra input:checked+.slider:before{
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+#fpass{
+    display: flex;
+    margin-left: 10%;
     justify-content: end;
     text-decoration: none;
+    color: #FF0000;
+}
+#fpass:hover{
+    color: #c50000;
 }
 #logReg{
     display: flex;
     justify-content: center;
+}
+#social{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+#social a{
+    padding: 0 20px;
+}
+#social img{
+    width: 35px;
 }
 .bname{
     background-repeat: no-repeat;
@@ -49,6 +119,12 @@
     height: 30px;
     padding-left: 40px;
     border-radius: 10px;
+    border-style: solid;
+}
+.bname:focus{
+    outline: none;
+    border-color: #c50000;
+    box-shadow: 0 0 10px #c50000;
 }
 .btn{
     color: white;
@@ -60,4 +136,22 @@
     align-items: center;
     border-radius: 20px;
     margin: 15px;
+}
+.btn:hover{
+    background-color: #c50000;
+    cursor: pointer;
+}
+
+@media(max-width: 540px){
+    #loginwindow{
+        width: 75%;
+    }
+    #extra{
+        flex-direction: column;
+    }
+    #fpass{
+        margin-top: 3%;
+        margin-left: 0%;
+        align-self: flex-start;
+    }
 }
