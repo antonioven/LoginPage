@@ -17,18 +17,47 @@
     justify-content: center;
     width: 350px;
     height: 450px;  
+    padding: 80px 30px;
+    border-radius: 20px;
 }
 #data{
     display: flex;
     flex-direction: column;
 }
+#userpass{
+    margin-bottom: 150px;
+}
+#data{
+    margin-bottom: 10px;
+}
+#data label{
+    color: grey;
+}
+#userpass a{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+}
+#logReg{
+    display: flex;
+    justify-content: center;
+}
 .bname{
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
-}
-.dtext{
     height: 30px;
     padding-left: 40px;
     border-radius: 10px;
+}
+.btn{
+    color: white;
+    display: flex;
+    height: 40px;
+    width: 100px;
+    background-color: #FF0000;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 15px;
 }
